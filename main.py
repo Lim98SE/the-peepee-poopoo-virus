@@ -9,7 +9,7 @@ def encrypt(text):
     output = ""
 
     for i in text:
-        seed = random.randint(0, 16)
+        seed = random.randint(0, 255)
         output += f"{chr(seed)}{chr(i ^ seed)}"
     
     return output
